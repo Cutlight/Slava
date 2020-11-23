@@ -129,7 +129,7 @@ local serializer = {}
 
 local settings = {}
 
-local hud = loadstring(game:HttpGet("https://pastebin.com/raw/3hREvLEU", DEBUG_MODE == false and true or DEBUG_MODE == true and false))() -- Ugly ui do not care
+local hud = loadstring(game:HttpGet("https://raw.githubusercontent.com/Cutlight/Slava/main/UILib", DEBUG_MODE == false and true or DEBUG_MODE == true and false))() -- Ugly ui do not care
 
 local aimbot = {}
 
@@ -780,7 +780,7 @@ do
     --/ Settings
 
     -- TODO: Other datatypes.
-    settings.fileName = "AimHot_v8_settings.txt" -- Lovely
+    settings.fileName = "Slava_settings.txt" -- Lovely
     settings.saved = {}
 
     function settings:Get(name, default)
@@ -1834,12 +1834,12 @@ do
         local viewportsize = camera.ViewportSize
         if credits == nil then
             credits = newdrawing("Text", {
-                Text = "AimHot v8, Herrtt#3868"; -- yes now be happy this is free
+                Text = "Слава v9"; -- yes now be happy this is free
                 Color = Color3.new(255,255,255);
                 Size = 25.0;
-                Transparency = .8;
+                Transparency = .9;
                 Position = v2new(viewportsize.X/8, 6);
-                Outline = true;
+                Outline = false;
                 Visible = true;
             })
         else
